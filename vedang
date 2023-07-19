@@ -1,0 +1,181 @@
+Microsoft Windows [Version 10.0.22621.1992]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\USER>cd desktop
+
+C:\Users\USER\Desktop>cd github
+
+C:\Users\USER\Desktop\github>git log
+commit 947e2dfbf1052bf688393a593c11bbc97471d148 (HEAD -> new, master)
+Author: prince of dubai <sihan@shaik.com>
+Date:   Wed Jul 12 14:03:18 2023 +0530
+
+    Initial commit
+
+C:\Users\USER\Desktop\github>git status
+On branch new
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   sd.txt
+        modified:   test.txt
+
+
+C:\Users\USER\Desktop\github>git commit -m"first commit on master"
+[new e7cb88a] first commit on master
+ 2 files changed, 4 insertions(+)
+ create mode 100644 sd.txt
+
+C:\Users\USER\Desktop\github>git status
+On branch new
+nothing to commit, working tree clean
+
+C:\Users\USER\Desktop\github>git log
+commit e7cb88a7391a11c945a4f9fdcb3f7c6ad360ea1e (HEAD -> new)
+Author: Imsihan <sihanrrr@gmail.com>
+Date:   Wed Jul 19 12:27:11 2023 +0530
+
+    first commit on master
+
+commit 947e2dfbf1052bf688393a593c11bbc97471d148 (master)
+Author: prince of dubai <sihan@shaik.com>
+Date:   Wed Jul 12 14:03:18 2023 +0530
+
+    Initial commit
+
+C:\Users\USER\Desktop\github>git checkout -n new
+error: unknown switch `n'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --guess               second guess 'git checkout <no-such-branch>' (default)
+    --overlay             use overlay mode (default)
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge, diff3, or zdiff3)
+    -d, --detach          detach HEAD at named commit
+    -t, --track[=(direct|inherit)]
+                          set branch tracking configuration
+    -f, --force           force checkout (throw away local modifications)
+    --orphan <new-branch>
+                          new unparented branch
+    --overwrite-ignore    update ignored files (default)
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+C:\Users\USER\Desktop\github>git checkout -b new
+fatal: a branch named 'new' already exists
+
+C:\Users\USER\Desktop\github>git log
+commit e7cb88a7391a11c945a4f9fdcb3f7c6ad360ea1e (HEAD -> new)
+Author: Imsihan <sihanrrr@gmail.com>
+Date:   Wed Jul 19 12:27:11 2023 +0530
+
+    first commit on master
+
+commit 947e2dfbf1052bf688393a593c11bbc97471d148 (master)
+Author: prince of dubai <sihan@shaik.com>
+Date:   Wed Jul 12 14:03:18 2023 +0530
+
+    Initial commit
+
+C:\Users\USER\Desktop\github>git commit -m"first commt on branch new"
+On branch new
+nothing to commit, working tree clean
+
+C:\Users\USER\Desktop\github>git config --global user.name"halfbllodprince99"
+
+C:\Users\USER\Desktop\github>git config --global user.email"vedangparab946@gmail.com"
+
+C:\Users\USER\Desktop\github>git config --global user.password"Vedang@946"
+error: invalid key: user.passwordVedang@946
+
+C:\Users\USER\Desktop\github>git config --global user.password"vedang@946"
+error: invalid key: user.passwordvedang@946
+
+C:\Users\USER\Desktop\github>git config --global user.password"vedang946"
+
+C:\Users\USER\Desktop\github>git remote add origin https://github.com/halfbloodprince99/github.git
+
+C:\Users\USER\Desktop\github>git push -u origin new
+info: please complete authentication in your browser...
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (7/7), 510 bytes | 510.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/halfbloodprince99/github.git
+ * [new branch]      new -> new
+branch 'new' set up to track 'origin/new'.
+
+C:\Users\USER\Desktop\github>git pull origine master
+fatal: 'origine' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+C:\Users\USER\Desktop\github>git pull origin master
+fatal: couldn't find remote ref master
+
+C:\Users\USER\Desktop\github>git puii
+git: 'puii' is not a git command. See 'git --help'.
+
+The most similar commands are
+        pull
+        push
+
+C:\Users\USER\Desktop\github>git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 702 bytes | 7.00 KiB/s, done.
+From https://github.com/halfbloodprince99/github
+   e7cb88a..653ea72  new        -> origin/new
+Updating e7cb88a..653ea72
+Fast-forward
+ project1 | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 project1
+
+C:\Users\USER\Desktop\github>git add .
+
+C:\Users\USER\Desktop\github>git commit-m"first comment on project1"
+git: 'commit-mfirst comment on project1' is not a git command. See 'git --help'.
+
+C:\Users\USER\Desktop\github>git commit -m"first comment on project1"
+[new 27b1716] first comment on project1
+ 2 files changed, 4 insertions(+)
+
+C:\Users\USER\Desktop\github>git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/halfbloodprince99/github.git'
+
+C:\Users\USER\Desktop\github>git push -u origin new
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 373 bytes | 373.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/halfbloodprince99/github.git
+   653ea72..27b1716  new -> new
+branch 'new' set up to track 'origin/new'.
+
+C:\Users\USER\Desktop\github>
